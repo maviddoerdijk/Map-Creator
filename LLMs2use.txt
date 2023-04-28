@@ -1,0 +1,2 @@
+Useful blog post:
+https://towardsdatascience.com/getting-started-with-langchain-a-beginners-guide-to-building-llm-powered-applications-95fc8898732c
