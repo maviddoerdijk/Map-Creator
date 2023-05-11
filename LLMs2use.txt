@@ -1,2 +1,20 @@
 Useful blog post:
 https://towardsdatascience.com/getting-started-with-langchain-a-beginners-guide-to-building-llm-powered-applications-95fc8898732c
+
+
+Best i've found so far:
+flan by google
+flan has different sizes, you do need a token from google to get answers from flan
+
+
+import flan
+
+model = flan.T5Model.from_pretrained("google/flan-t5-small")
+tokenizer = flan.T5Tokenizer.from_pretrained("google/flan-t5-small")
+
+prompt = "What is the capital of France?"
+input_ids = tokenizer.encode(prompt, return_tensors="pt")
+output_ids = model.generate(input_ids)
+
+output = tokenizer.decode(output_ids[0], skip_special_tokens=True)
+print(output)
