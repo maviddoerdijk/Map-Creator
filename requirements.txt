@@ -1,0 +1,4 @@
+transformers==4.15.0
+sentencepiece==0.1.99
+ast==0.0.1
+# hello

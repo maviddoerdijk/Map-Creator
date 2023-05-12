@@ -18,3 +18,9 @@ output_ids = model.generate(input_ids)
 
 output = tokenizer.decode(output_ids[0], skip_special_tokens=True)
 print(output)
+
+
+
+
+transformers module
+Transformers is a Python library that provides state-of-the-art machine learning architectures for natural language processing (NLP) tasks1. It is developed by Hugging Face and is built on top of PyTorch, TensorFlow, and JAX2. The library provides a simple and consistent API for loading and using pre-trained models for various NLP tasks such as text classification, question answering, and text generation1.

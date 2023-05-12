@@ -1,5 +1,16 @@
-from ast import literal_eval
-chatbot_output = " random shit {'red': ['one', 'two'], 'blue': ['four', 'five']} more rndom shit "
+from transformers import TFT5ForConditionalGeneration, T5Tokenizer
+from tensorflow.keras.initializers import RandomNormal
 
-maybe_dict = chatbot_output[chatbot_output.index("{"):chatbot_output.index("}") + 1]
-mydict = literal_eval(maybe_dict)
+model = TFT5ForConditionalGeneration.from_pretrained("google/flan-t5-small")
+tokenizer = T5Tokenizer.from_pretrained("google/flan-t5-small")
+
+input_text = "Question: How many cities does France have with more than 1 million inhabitants?"
+input_ids = tokenizer.encode(input_text, return_tensors="tf")
+
+initializer = RandomNormal(seed=42)
+model.init_weights(initializer)
+
+outputs = model.generate(input_ids, max_new_tokens=10)
+decoded_output = tokenizer.decode(outputs[0], skip_special_tokens=True)
+
+print(decoded_output)
