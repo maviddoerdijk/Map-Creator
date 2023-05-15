@@ -27,3 +27,25 @@ transformers module
 
 ## EdgeGPT
 An unofficial reverse-engineered Fake Bing AI API  
+
+
+
+
+Other ideas for text-to-... tools:
+text-to excel file
+uses LLM to fill excel files with certain data to save to .xslx or .csv file
+(example best use case: give an excel file with all these coworkers, make a roster where they are all working 8 hours per day, 3 days per week, where everyday's total work is 40 hours)
+
+
+text-to-excel file - specific stock edition
+has standard form with one stock per column, and type of information about stock per row  
+(example best use case: create excel file of 10 stock picks with highest ROIC in the S&P500)
+
+text-to-python (list, dict, numpy array, etc.)
+easy way to quickly get large python class 
+p.s.: easy to just ask LLM itself, think of ideas to make this tool more useful - e.g. it's able to make much larger data sets at once
+(example best use case: create python dictionary with each country as the key and its 5 most populous cities as the values)
+
+
+text-to-other program language
+()
